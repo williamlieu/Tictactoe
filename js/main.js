@@ -8,10 +8,13 @@
 // Use semantic markup for HTML and CSS (adhere to best practices)
 
 
+const board = ['','','','','','','','',''];
 
-const board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-// Switch turns between X and O (or whichever markers you select)
-let playerOneIsNext = true;
+const render = function() {
+  for (var i = 0; i < board.length; i++) {
+      $(`#${i}`).text( board[i] )
+  }
+}
 
 const playOne = function(numb) {
   board[numb] = "X";
@@ -28,18 +31,19 @@ const playTurn = function(numb) {
     playerOneIsNext = false;
     // switch player after placing value in board
     checkForWinner("X")
+    // render()
   } else {
     // player two is next
     playTwo(numb);
     playerOneIsNext = true;
     // switch player after placing value in board
     checkForWinner("O")
+    // render()
   };
 }
 
+
 // Visually display which side won if a player gets three in a row or show a draw/"cat’s game" if neither wins
-
-
 const checkForWinner = function(player) {
   if (board[0] === player && board[1] === player && board[2] === player) {
     console.log(":Winnr");
@@ -48,20 +52,34 @@ const checkForWinner = function(player) {
 
  if (board[0] === player && board[1] === player && board[2] === player) {
    console.log(":Winnr");
-  return "Winner"
+   return "Winner"
+ }
+ if (board[0] === player && board[3] === player && board[6] === player) {
+   console.log(":Winnr");
+   return "Winner"
+ }
+ if (board[0] === player && board[4] === player && board[8] === player) {
+   console.log(":Winnr");
+   return "Winner"
+ }
+ if (board[1] === player && board[4] === player && board[7] === player) {
+   console.log(":Winnr");
+   return "Winner"
+ }
+ if (board[0] === player && board[3] === player && board[6] === player) {
+   console.log(":Winnr");
+   return "Winner"
+ }
+ if (board[3] === player && board[4] === player && board[5] === player) {
+   console.log(":Winnr");
+   return "Winner"
+ }
+ if (board[6] === player && board[7] === player && board[8] === player) {
+   console.log(":Winnr");
+   return "Winner"
+ }
+ if (board[2] === player && board[4] === player && board[6] === player) {
+   console.log(":Winnr");
+   return "Winner"
 }
-} if (case1 = "X" && case4 = "X" && case7 = "X") {
-   return "winner"
-} if (case1 = "X" && case5 = "X" && case9 = "X") {
-   return "Winner"
-} if (case2 = "X" && case5 = "X" && case8 = "X") {
-   return "Winner"
-} if (case3 = "X" && case6 = "X" && case9 = "X") {
-   return "Winner"
-} if (case4 = "X" && case5 = "X" && case6 = "X") {
-    return "Winner"
-} if (case7 = "X" && case8 = "X" && case9 = "X") {
-    return "Winner"
-} if (case3 = "X" && case5 = "X" && case7 = "X") {
-  return "Winner"
-} if
+};

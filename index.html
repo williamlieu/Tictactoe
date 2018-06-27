@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
 
-    <title>Tic Tac Toe </title>
-    <h1>Tic-Tac-Toe Game</h1>
-  </head>
-  <body>
-    <table class="grid">
-       <tr>
-          <td id="case1"></td>
-          <td id="case2"></td>
-          <td id="case3"></td>
-       </tr>
-       <tr>
-          <td id="case4"></td>
-          <td id="case5"></td>
-          <td id="case6"></td>
-       </tr>
-       <tr>
-          <td id="case7"></td>
-          <td id="case8"></td>
-          <td id="case9"></td>
-       </tr>
-    </table>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
 
+  <title>Tic Tac Toe </title>
+  <h1>Tic-Tac-Toe Game</h1>
+</head>
 
-  </body>
-  <script type="text/javascript" src="js/main.js"></script>
-  <footer>
-    <h2>Ready ? Let's have fun !</h2>
-  </footer>
+<body>
+  <table class="grid">
+    <tr>
+      <td class="cell" id="0"></td>
+      <td class="cell" id="1"></td>
+      <td class="cell" id="2"></td>
+    </tr>
+    <tr>
+      <td class="cell" id="3"></td>
+      <td class="cell" id="4"></td>
+      <td class="cell" id="5"></td>
+    </tr>
+    <tr>
+      <td class="cell" id="6"></td>
+      <td class="cell" id="7"></td>
+      <td class="cell" id="8 "></td>
+    </tr>
+  </table>
+  <div>
+    <div class="endgame">
+      <div class="text"></div>
+    </div>
+
+    <!-- <div>
+      <button class= onclick="startGame()">Replay</button>
+    </div> -->
+
+  </div>
+
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<footer>
+  <h2>Ready ? Let's have fun !</h2>
+</footer>
+
 </html>

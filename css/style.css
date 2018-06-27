@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=Paytone+One|Shrikhand');
 
  body {
   background:url("http://www.hdwallpapery.com/static/images/sunshine-twitter-background_ySkbOWv.jpg");
@@ -24,14 +24,65 @@ h2 {
 table {
   margin: auto;
 }
+td {
+  font-size: 35px;
+  cursor : pointer;
+}
 
+/* button {
+  color:#f1aaec;
+  padding: 15px;
+  font-size: 20px;
+  margin:auto;
+  border-radius: 25px;
+  position: absolute;
+  text-align: center;
+
+} */
+
+/* .onClick {
+  padding: 15px;
+  font-size:20px;
+  margin-top: 15px;
+  border-radius: 25px;
+  position: absolute;
+} */
+
+
+/* .wrapper {
+  text-align: center;
+  font-size: 30px;
+
+} */
 
 .grid td {
   height: 100px;
   width: 100px;
-  border :8px dotted steelblue;
+  border :8px solid steelblue;
   border-radius: 25px;
   position: relative;
   margin: 0 auto;
+  font-size: 55px ;
+  font-family: 'Paytone One', sans-serif;
+  text-align: center;
+  color:#daff00;
+  background:#c6cfc6;
+  cursor :
 
+}
+
+.endgame {
+    display: none;
+    width: 200px;
+    top: 120px;
+    background-color: rgba(255,133,63,0.80);
+    position: absolute;
+    left:50%;
+    margin-left: -100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
 }
