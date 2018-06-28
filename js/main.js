@@ -1,85 +1,110 @@
-// // Render a game board in the browser
-// Switch turns between X and O (or whichever markers you select)
-// Visually display which side won if a player gets three in a row or show a draw/"cat’s game" if neither wins
-// Include separate HTML / CSS / JavaScript files
-// Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
-// Use Javascript for DOM manipulation
-// Deploy your game online, where the rest of the world can access it
-// Use semantic markup for HTML and CSS (adhere to best practices)
-
-
 const board = ['','','','','','','','',''];
-
+//call the element X or 0 in the console
 const render = function() {
   for (var i = 0; i < board.length; i++) {
       $(`#${i}`).text( board[i] )
   }
 }
 
-const playOne = function(numb) {
-  board[numb] = "X";
-}
 
-const playTwo = function(numb) {
-  board[numb] = "O";
-}
+$(document).ready(function() {
 
-const playTurn = function(numb) {
-  if (playerOneIsNext === true) {
-    // players one turn
-    playOne(numb);
-    playerOneIsNext = false;
-    // switch player after placing value in board
-    checkForWinner("X")
-    // render()
-  } else {
-    // player two is next
-    playTwo(numb);
-    playerOneIsNext = true;
-    // switch player after placing value in board
-    checkForWinner("O")
-    // render()
-  };
-}
+  const startGame = document.querySelectorAll("td");
+  let X_or_O = 0;
+
+  for( let i = 0 ; i < startGame.length; i++) {
+    const td = startGame[i];
+    td.onclick = function () {
+      if(X_or_O%2 === 0) {
+        console.log(X_or_O)
+        this.player = "X";
+        playOne( i );
+        checkForWinner("X");
+        X_or_O += 1;
+      } else {
+        console.log(X_or_O)
+        this.player = "O";
+        playTwo( i );
+        X_or_O += 1;
+        checkForWinner("O");
+      }
+      console.log( board );
+      render();
+    }
+
+  }
+
+  const playOne = function(numb) {
+    board[numb] = "X";
+  }
+
+  const playTwo = function(numb) {
+    board[numb] = "O";
+  }
 
 
-// Visually display which side won if a player gets three in a row or show a draw/"cat’s game" if neither wins
-const checkForWinner = function(player) {
-  if (board[0] === player && board[1] === player && board[2] === player) {
-    console.log(":Winnr");
-   return "Winner"
- }
+  // function to know which player will
+  const playTurn = function(numb) {
+    if (playerOneIsNext === true) {
+      // players one turn
+      playOne(numb);
+      playerOneIsNext = false;
+      // switch player after placing value in board
+      checkForWinner("X")
+      // render()
+    } else {
+      // player two is next
+      playTwo(numb);
+      playerOneIsNext = true;
+      // switch player after placing value in board
+      checkForWinner("O")
+      // render()
+    };
+  }
 
- if (board[0] === player && board[1] === player && board[2] === player) {
-   console.log(":Winnr");
-   return "Winner"
+
+  // Visually display which side won if a player gets three in a row or show a draw/"cat’s game" if neither wins
+  const checkForWinner = function(player) {
+    if (board[0] === player && board[1] === player && board[2] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+    }
+
+   if (board[0] === player && board[1] === player && board[2] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+   }
+   if (board[0] === player && board[3] === player && board[6] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+   }
+   if (board[0] === player && board[4] === player && board[8] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+   }
+   if (board[1] === player && board[4] === player && board[7] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+   }
+   if (board[0] === player && board[3] === player && board[6] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+   }
+   if (board[3] === player && board[4] === player && board[5] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+   }
+   if (board[6] === player && board[7] === player && board[8] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+   }
+   if (board[2] === player && board[4] === player && board[6] === player) {
+     $('.winner').text(`${ player } wins!`)
+     return "Winner"
+  }
  }
- if (board[0] === player && board[3] === player && board[6] === player) {
-   console.log(":Winnr");
-   return "Winner"
- }
- if (board[0] === player && board[4] === player && board[8] === player) {
-   console.log(":Winnr");
-   return "Winner"
- }
- if (board[1] === player && board[4] === player && board[7] === player) {
-   console.log(":Winnr");
-   return "Winner"
- }
- if (board[0] === player && board[3] === player && board[6] === player) {
-   console.log(":Winnr");
-   return "Winner"
- }
- if (board[3] === player && board[4] === player && board[5] === player) {
-   console.log(":Winnr");
-   return "Winner"
- }
- if (board[6] === player && board[7] === player && board[8] === player) {
-   console.log(":Winnr");
-   return "Winner"
- }
- if (board[2] === player && board[4] === player && board[6] === player) {
-   console.log(":Winnr");
-   return "Winner"
-}
-};
+});
+
+// const clickBoard = function () {
+//
+// }
