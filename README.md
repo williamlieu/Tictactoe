@@ -1,6 +1,11 @@
-#Project
+## Tic tac toe Game
 
-## Tic tac toe
+## Technologies and frameworks 
+
+- HTML
+- CSS
+- Javascript
+- Jquery
 
 ### How to play the Tic Tac Toe Game
 
