@@ -6,7 +6,7 @@ this game has been built with :
 - HTML
 - CSS
 - Javascript
-- Jquery
+- jQuery
 
 ### How to play the Tic Tac Toe Game
 
