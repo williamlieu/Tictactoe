@@ -1,20 +1,19 @@
+//Structure of the board
 let board = ['', '', '', '', '', '', '', '', ''];
-//call the element X or 0 in the console
+//Call the element X or 0 in the console
 const render = function() {
   for (var i = 0; i < board.length; i++) {
     $(`#${i}`).text(board[i])
   }
 }
-
+//Function for reset the board
 const reset = function (){
   board = ['', '', '', '', '', '', '', '', ''];
   render();
 };
 
-
 $(document).ready(function() {
-
-// display the X or ) in the board
+// display the X or O in the board
   const startGame = document.querySelectorAll("td");
   let X_or_O = 0;
 
@@ -37,7 +36,6 @@ $(document).ready(function() {
       console.log(board);
       render();
     }
-
   }
 
   const playOne = function(numb) {
@@ -64,11 +62,9 @@ $(document).ready(function() {
       playerOneIsNext = true;
       // switch player after placing value in board
       checkForWinner("O")
-
     };
   }
-
-
+  const countMove = 0;
   // Visually display which side won if a player gets three in a row or show a draw/"cat’s game" if neither wins
   const checkForWinner = function(player) {
     if (board[0] === player && board[1] === player && board[2] === player) {
@@ -98,18 +94,15 @@ $(document).ready(function() {
     }
     if (board[3] === player && board[4] === player && board[5] === player) {
       $('.winner').text(`${ player } wins!`)
-
       return "Winner"
     }
     if (board[6] === player && board[7] === player && board[8] === player) {
       $('.winner').text(`${ player } wins!`)
-debugger
       return "Winner"
     }
     if (board[2] === player && board[4] === player && board[6] === player) {
       $('.winner').text(`${ player } wins!`)
       return "Winner"
     }
-
   }
 });

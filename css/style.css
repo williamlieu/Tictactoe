@@ -1,45 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Paytone+One|Shrikhand');
 
 body {
-  background: url("http://www.hdwallpapery.com/static/images/sunshine-twitter-background_ySkbOWv.jpg");
+  background: url("../images/tictactoe.png");
   background-size: cover;
   background-repeat: no-repeat;
-
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  color: orange;
 }
 
 h1 {
-  font-family: 'Shrikhand', cursive;
-  color: orange;
-  text-align: center;
   font-size: 60px;
 }
 
 h2 {
-  font-family: 'Shrikhand', cursive;
-  text-align: center;
   font-size: 40px;
-  color: orange;
 }
 
 h3 {
-  font-family: 'Shrikhand', cursive;
-  text-align: center;
-  font-size: 75px;
   color:rgb(38, 112, 223);
+  font-size:35px;
 }
-
 
 table {
   margin: auto;
   position:
 }
+
 td {
   font-size: 35px;
   cursor : pointer;
 }
 
  .reset {
-  display: none;
   color:rgb(32, 62, 171);
   background: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.belarbi.se%2Fwp-content%2Fuploads%2F2015%2F07%2Fccs_82_background.png&f=1");
   background-size: cover;
@@ -55,17 +48,13 @@ td {
   left: 50%;
   margin-left: -100px;
   margin-top: -120px;
+  display: none;
 
 }
-
-
-
- .wrapper {
+.wrapper {
   text-align: center;
   font-size: 30px;
-
 }
-
 .grid td {
   height: 100px;
   width: 100px;
@@ -77,11 +66,9 @@ td {
   font-family: 'Paytone One', sans-serif;
   text-align: center;
   color:#daff00;
-  background:#c6cfc6;
+  background: lightgrey;
   cursor : pointer;
-
 }
-
 .endgame {
     display: none;
     width: 200px;
