@@ -13,7 +13,7 @@ const reset = function (){
 };
 
 $(document).ready(function() {
-// display the X or O in the board
+// Display the X or O in the board
   const startGame = document.querySelectorAll("td");
   let X_or_O = 0;
 
@@ -47,17 +47,17 @@ $(document).ready(function() {
   }
 
 
-  // function to know which player will
+  // Function to know which player will
   const playTurn = function(numb) {
     if (playerOneIsNext === true) {
-      // players one turn
+      // Players one turn
       playOne(numb);
       playerOneIsNext = false;
-      // switch player after placing value in board
+      // Switch player after placing value in board
       checkForWinner("X")
       render()
     } else {
-      // player two is next
+      // Player two is next
       playTwo(numb);
       playerOneIsNext = true;
       // switch player after placing value in board
@@ -68,32 +68,32 @@ $(document).ready(function() {
   // Visually display which side won if a player gets three in a row or show a draw/"cat’s game" if neither wins
   const checkForWinner = function(player) {
     if (board[0] === player && board[1] === player && board[2] === player) {
-      $('.winner').text(`${ player } wins!`)
+      $('.winner').text(`Player ${ player } wins!`)
       return "Winner"
     }
 
     if (board[0] === player && board[1] === player && board[2] === player) {
-      $('.winner').text(`${ player } wins!`)
+      $('.winner').text(`Player ${ player } wins!`)
       return "Winner"
     }
     if (board[0] === player && board[3] === player && board[6] === player) {
-      $('.winner').text(`${ player } wins!`)
+      $('.winner').text(`Player ${ player } wins!`)
       return "Winner"
     }
     if (board[0] === player && board[4] === player && board[8] === player) {
-      $('.winner').text(`${ player } wins!`)
+      $('.winner').text(`Player ${ player } wins!`)
       return "Winner"
     }
     if (board[1] === player && board[4] === player && board[7] === player) {
-      $('.winner').text(`${ player } wins!`)
+      $('.winner').text(`Player ${ player } wins!`)
       return "Winner"
     }
     if (board[0] === player && board[3] === player && board[6] === player) {
-      $('.winner').text(`${ player } wins!`)
+      $('.winner').text(`Player ${ player } wins!`)
       return "Winner"
     }
     if (board[3] === player && board[4] === player && board[5] === player) {
-      $('.winner').text(`${ player } wins!`)
+      $('.winner').text(`Player ${ player } wins!`)
       return "Winner"
     }
     if (board[6] === player && board[7] === player && board[8] === player) {
