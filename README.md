@@ -1,5 +1,6 @@
 ## Tic tac toe
-If you want to play visit https://williamlieu.github.io/Tictactoe/
+The famous TicTacToe game 
+
 
 ## Technologies and frameworks 
 this game has been built with :
@@ -15,3 +16,7 @@ this game has been built with :
 - Then the second player plays
 - The game ends when someone wins or there is a draw
 - Once the game is over click the Reset button to play again
+
+## Deployement
+
+- If you want to play visit https://williamlieu.github.io/Tictactoe/
