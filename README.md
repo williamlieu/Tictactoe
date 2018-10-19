@@ -6,7 +6,7 @@ As a first project I created a simple Tic Tac Toe Game without AI.
 this game has been built with :
 - HTML
 - CSS
-- Javascript
+- JavaScript
 - jQuery
 
 ### How to play the Tic Tac Toe Game
