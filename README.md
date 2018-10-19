@@ -1,5 +1,5 @@
 ## Tic tac toe
-The famous TicTacToe game 
+As a first project I created a simple Tic Tac Toe Game without AI.
 
 
 ## Technologies and frameworks 
@@ -20,3 +20,8 @@ this game has been built with :
 ## Deployement
 
 - If you want to play visit https://williamlieu.github.io/Tictactoe/
+
+## Features to add 
+- Availability to choose the player 
+- Display the score for each player
+- Add an AI
